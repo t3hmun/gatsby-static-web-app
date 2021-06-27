@@ -4,6 +4,7 @@
   "description": "Me modding the gstsby starter to learn.",
   "version": "0.1.0",
   "dependencies": {
+    "@types/react-helmet": "^6.1.1",
     "gatsby": "^3.6.2",
     "gatsby-plugin-image": "^1.6.0",
     "gatsby-plugin-manifest": "^3.6.0",
