@@ -1,12 +1,10 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-starter-t3hmun",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Me modding the gstsby starter to learn.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "gatsby": "^3.6.2",
-    "gatsby-plugin-gatsby-cloud": "^2.6.1",
     "gatsby-plugin-image": "^1.6.0",
     "gatsby-plugin-manifest": "^3.6.0",
     "gatsby-plugin-offline": "^4.6.0",
@@ -23,7 +21,7 @@
     "prettier": "2.2.1"
   },
   "keywords": [
-    "gatsby"
+    "t3hmun"
   ],
   "license": "0BSD",
   "scripts": {
@@ -37,9 +35,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/t3hmun/gatsby-static-web-app"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/t3hmun/gatsby-static-web-app/issues"
   }
 }
