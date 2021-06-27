@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby t3hmun Starter`,
-    description: `Me moding the gastby starter.`,
+    title: `t3hmun`,
+    description: `This will evetually be a blog and some experiments.`,
     author: `t3hmun`,
+    themeAccent: `#F5A962`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -21,11 +22,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-t3hmun-default`,
+        name: `t3hmun`,
         short_name: `t3hmun`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#2C2C32`,
+        theme_color: `#F5A962`,
         display: `minimal-ui`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
