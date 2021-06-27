@@ -1,32 +1,23 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { ReactElement } from "react"
 
 type MetaItem = {
   name: string
   content: string
 }
 
-export type seoProps = {
+export type SeoProps = {
   description?: string
   lang?: string
   meta?: MetaItem[]
   title?: string
 }
 
-export function Seo({
-  description,
-  lang,
-  meta,
-  title,
-}: seoProps): React.ReactElement {
+/** Sets the Head meta data in a way thats good for seo. */
+export function Seo(props: SeoProps): ReactElement<SeoProps> {
+  // TODO: Add canonical URL and stuff, learn bare basics of common meta and SEO.
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -41,15 +32,15 @@ export function Seo({
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = props.description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
 
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: props.lang,
       }}
-      title={title}
+      title={props.title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
@@ -58,7 +49,7 @@ export function Seo({
         },
         {
           property: `og:title`,
-          content: title,
+          content: props.title,
         },
         {
           property: `og:description`,
@@ -78,13 +69,13 @@ export function Seo({
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: props.title,
         },
         {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta ?? [])}
+      ].concat(props.meta ?? [])}
     />
   )
 }
