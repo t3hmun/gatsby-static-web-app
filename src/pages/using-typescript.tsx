@@ -10,7 +10,10 @@ type DataProps = {
   }
 }
 
-const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
+const UsingTypescript = ({
+  data,
+  path,
+}): React.ReactElement<PageProps<DataProps>> => (
   <Layout>
     <Seo title="Using TypeScript" />
     <h1>Gatsby supports TypeScript by default!</h1>

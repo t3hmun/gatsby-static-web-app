@@ -11,11 +11,10 @@ const IndexPage = (): React.ReactElement => (
     <p>Now go build something great.</p>
     <StaticImage
       src="../images/test-image.png"
-      width={300}
+      width={150}
       quality={95}
       formats={["auto", "webp", "avif"]}
       alt="test image"
-      style={{ marginBottom: `1.45rem` }}
     />
     <p>
       <Link to="/page-2/">Go to page 2</Link> <br />
