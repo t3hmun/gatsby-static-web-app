@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { Layout, Seo } from "../components"
 
-const IndexPage = () => (
+const IndexPage = (): React.ReactElement => (
   <Layout>
     <Seo title="Home" />
     <h1>Hi people</h1>
@@ -13,7 +13,7 @@ const IndexPage = () => (
       src="../images/test-image.png"
       width={300}
       quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
+      formats={["auto", "webp", "avif"]}
       alt="test image"
       style={{ marginBottom: `1.45rem` }}
     />

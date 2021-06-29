@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { Layout, Seo } from "../components"
 
-const SecondPage = () => (
+const SecondPage = (): React.ReactElement => (
   <Layout>
     <Seo title="Page two" />
     <h1>Hi from the second page</h1>
