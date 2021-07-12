@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
 import { ReactElement } from "react";
+import { useSiteMetadata } from "../queries";
 
 type MetaItem = {
   name: string;
@@ -15,25 +15,13 @@ export type SeoProps = {
   title?: string;
 };
 
-/** Sets the Head meta data in a way thats good for seo. */
+/** Sets the Head meta data in a way that's good for seo. */
 export function Seo(props: SeoProps): ReactElement<SeoProps> {
   // TODO: Add canonical URL and stuff, learn bare basics of common meta and SEO.
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  );
+  const data = useSiteMetadata();
 
-  const metaDescription = props.description || site.siteMetadata.description;
-  const defaultTitle = site.siteMetadata?.title;
+  const metaDescription = props.description || data.description;
+  const defaultTitle = data.title;
 
   return (
     <Helmet
@@ -65,7 +53,7 @@ export function Seo(props: SeoProps): ReactElement<SeoProps> {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: data.author || ``,
         },
         {
           name: `twitter:title`,

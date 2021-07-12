@@ -1,32 +1,19 @@
 import * as React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 
 import { Header } from "./header";
+import { useSiteMetadata } from "../queries";
+
 import "./layout.css";
 
 export function Layout({ children }) {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-          description
-          themeAccent
-          buildDate
-        }
-      }
-    }
-  `).site.siteMetadata;
+  const data = useSiteMetadata();
 
   return (
     <>
-      <Header
-        siteTitle={data.site.siteMetadata.title}
-        description={data.site.siteMetadata.description}
-      />
+      <Header siteTitle={data.title} description={data.description} />
       <div>
         <main>{children}</main>
-        <footer>Last updated {data.site.siteMetadata.buildDate}</footer>
+        <footer>Last updated at {data.buildDate}</footer>
       </div>
     </>
   );
