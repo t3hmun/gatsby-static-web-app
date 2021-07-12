@@ -4,6 +4,7 @@ module.exports = {
     description: `This will evetually be a blog and some experiments.`,
     author: `t3hmun`,
     themeAccent: `#F5A962`,
+    buildDate: new Date().toISOString(),
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

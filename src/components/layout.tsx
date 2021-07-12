@@ -12,10 +12,11 @@ export function Layout({ children }) {
           title
           description
           themeAccent
+          buildDate
         }
       }
     }
-  `)
+  `).site.siteMetadata
 
   return (
     <>
@@ -25,7 +26,7 @@ export function Layout({ children }) {
       />
       <div>
         <main>{children}</main>
-        <footer>Last updated {new Date().toISOString()}</footer>
+        <footer>Last updated {data.site.siteMetadata.buildDate}</footer>
       </div>
     </>
   )
