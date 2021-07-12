@@ -1,11 +1,11 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { ReactElement } from "react"
+import * as React from "react";
+import { Link } from "gatsby";
+import { ReactElement } from "react";
 
 export type headerProps = {
-  siteTitle: string
-  description: string
-}
+  siteTitle: string;
+  description: string;
+};
 
 export function Header(props: headerProps): ReactElement<headerProps> {
   return (
@@ -17,5 +17,5 @@ export function Header(props: headerProps): ReactElement<headerProps> {
         <p>{props.description}</p>
       </div>
     </header>
-  )
+  );
 }

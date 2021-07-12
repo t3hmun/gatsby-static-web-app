@@ -1,7 +1,7 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import { Layout, Seo } from "../components"
+import * as React from "react";
+import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
+import { Layout, Seo } from "../components";
 
 const IndexPage = (): React.ReactElement => (
   <Layout>
@@ -21,6 +21,6 @@ const IndexPage = (): React.ReactElement => (
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
     </p>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

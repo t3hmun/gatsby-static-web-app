@@ -1,6 +1,6 @@
-import * as React from "react"
+import * as React from "react";
 
-import { Layout, Seo } from "../components"
+import { Layout, Seo } from "../components";
 
 const NotFoundPage = (): React.ReactElement => (
   <Layout>
@@ -8,6 +8,6 @@ const NotFoundPage = (): React.ReactElement => (
     <h1>404: Not Found</h1>
     <p>Not a real page.</p>
   </Layout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

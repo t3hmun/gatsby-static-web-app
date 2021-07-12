@@ -1,8 +1,8 @@
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import * as React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
-import { Header } from "./header"
-import "./layout.css"
+import { Header } from "./header";
+import "./layout.css";
 
 export function Layout({ children }) {
   const data = useStaticQuery(graphql`
@@ -16,7 +16,7 @@ export function Layout({ children }) {
         }
       }
     }
-  `).site.siteMetadata
+  `).site.siteMetadata;
 
   return (
     <>
@@ -29,5 +29,5 @@ export function Layout({ children }) {
         <footer>Last updated {data.site.siteMetadata.buildDate}</footer>
       </div>
     </>
-  )
+  );
 }

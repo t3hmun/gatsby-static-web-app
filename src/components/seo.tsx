@@ -1,19 +1,19 @@
-import * as React from "react"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
-import { ReactElement } from "react"
+import * as React from "react";
+import { Helmet } from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
+import { ReactElement } from "react";
 
 type MetaItem = {
-  name: string
-  content: string
-}
+  name: string;
+  content: string;
+};
 
 export type SeoProps = {
-  description?: string
-  lang?: string
-  meta?: MetaItem[]
-  title?: string
-}
+  description?: string;
+  lang?: string;
+  meta?: MetaItem[];
+  title?: string;
+};
 
 /** Sets the Head meta data in a way thats good for seo. */
 export function Seo(props: SeoProps): ReactElement<SeoProps> {
@@ -30,10 +30,10 @@ export function Seo(props: SeoProps): ReactElement<SeoProps> {
         }
       }
     `
-  )
+  );
 
-  const metaDescription = props.description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const metaDescription = props.description || site.siteMetadata.description;
+  const defaultTitle = site.siteMetadata?.title;
 
   return (
     <Helmet
@@ -77,5 +77,5 @@ export function Seo(props: SeoProps): ReactElement<SeoProps> {
         },
       ].concat(props.meta ?? [])}
     />
-  )
+  );
 }
